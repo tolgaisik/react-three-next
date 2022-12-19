@@ -8,11 +8,16 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/Tier1_Baked.glb')
   return (
-    <group {...props} dispose={null} >
+    <group {...props} dispose={null}>
       <group>
         <group name="TIER_TRANSPARENT" >
           <mesh name="TIER1" castShadow receiveShadow geometry={nodes.TIER1.geometry} material={materials.TIER1} position={[1478.315, 298.341, 58.364]} />
           <mesh name="Cube" castShadow receiveShadow geometry={nodes.Cube.geometry} material={materials.holo_1} position={[-531.706, 178.786, -21.943]} />
+          <mesh name="Cube1" castShadow receiveShadow geometry={nodes.Cube1.geometry} material={materials.holo_1} position={[-524.351, 178.786, -21.943]} />
+          <mesh name="Group" castShadow receiveShadow geometry={nodes.Group.geometry} material={materials.glass_fence} position={[136.508, 348.66, 221.159]} scale={[0.902, 0.967, 0.902]} />
+          <mesh name="Group_1" castShadow receiveShadow geometry={nodes.Group_1.geometry} material={materials.glass_fence} position={[136.508, 11.529, 221.159]} scale={[0.902, 1, 0.902]} />
+          <mesh name="FENCE" castShadow receiveShadow geometry={nodes.FENCE.geometry} material={materials.glass_fence} position={[-505.157, 335.529, 335.455]} />
+          <mesh name="Group1" castShadow receiveShadow geometry={nodes.Group1.geometry} material={materials.Glass} position={[-7.056, 317.627, -224.654]} />
         </group>
       </group>
     </group>
